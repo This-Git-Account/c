@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ui-datepicker,
+.ui-datepicker-material-header {
+  font-family: 'Roboto', sans-serif;
+  display: initial;
+}
+
+.ui-datepicker .ui-datepicker-header,
+.ui-datepicker .ui-datepicker-title,
+.ui-datepicker table {
+  margin: 0;
+}
+
+.ui-datepicker .ui-datepicker-title {
+  padding: 10px;
+  position: relative; /* add */
+}
+
+.ui-datepicker table {
+  width: 100%;
+  border-collapse: collapse;
+  content-visibility: auto;
+}
+
+.ui-datepicker .ui-datepicker-header {
+  background-color: #1F3A58;
+  color: white;
+}
+
+.ui-datepicker-material-header {
+  display: block;
+  background-color: #284B72;
+  color: white;
+  text-align: center;
+  width: 325px;
+}
+.ui-datepicker-material-header
+.ui-datepicker-material-day {
+  background-color: #1F3A58;
+  padding: 10px;
+  font-size: 1rem;
+}
+.ui-datepicker-material-header
+.ui-datepicker-material-date {
+  padding: 20px;
+  position: relative;
+}
+.ui-datepicker-material-header .ui-datepicker-material-date .ui-datepicker-material-month,
+.ui-datepicker-material-header .ui-datepicker-material-date .ui-datepicker-material-day-num,
+.ui-datepicker-material-header .ui-datepicker-material-date .ui-datepicker-material-year {
+  padding: 5px;
+}
+.ui-datepicker-material-header
+.ui-datepicker-material-date
+.ui-datepicker-material-month {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.ui-datepicker-material-header
+.ui-datepicker-material-date
+.ui-datepicker-material-day-num {
+  font-size: 4.5rem;
+}
+.ui-datepicker-material-header
+.ui-datepicker-material-date
+.ui-datepicker-material-year {
+  font-size: 1.8rem;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.ui-datepicker {
+  padding: 0;
+  border: none;
+  box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
+  width: 325px;
+}
+
+.ui-corner-all {
+  border-radius: 0;
+}
+
+.ui-widget-header {
+  border: 0;
+}
+
+.ui-datepicker-header {
+  text-align: center;
+  background: white;
+  font-weight: 300;
+}
+
+.ui-datepicker-calendar
+.ui-state-active {
+  border-radius: 50%;
+  background-color: #284B72;
+  color: white;
+}
+.ui-datepicker-calendar thead th {
+  color: #999999;
+  font-weight: 200;
+  height: 33px;
+  width: 33px;
+  line-height: 36px;
+}
+
+.ui-datepicker-calendar tbody td {
+  background: none;
+  border: none;
+  border-right: 1px solid #dddddd;
+  text-align: center;
+  height: 33px;
+  width: 33px;
+  line-height: 36px;
+}
+.ui-datepicker-calendar tbody td:nth-child(5n),
+.ui-datepicker-calendar tbody td:nth-child(7n) {
+  border: none;
+}
+
+.ui-datepicker-calendar tbody td.ui-datepicker-today {
+  background-color: #284B72;
+  color: white;
+}
+
+.ui-datepicker-calendar tbody td.ui-datepicker-other-month {
+  opacity: 0.35;
+}
+
+.ui-datepicker-calendar .ui-datepicker-week-end {
+  background-color: #b4cbe5;
+}
+
+#root {
+  width: 325px;
+  margin: 50px auto;
+}
+
+.ui-datepicker-material-day,
+.ui-datepicker-material-month,
+.ui-datepicker-month { /* добавил, отсутствовали */
+  text-transform: capitalize; /* заглавная первая буква */
+}
+
+.arrow {
+  position: absolute;
+  top: 7px;
+  font-size: larger;
+  cursor: pointer;
+  width: 15px;
+  fill: white;
+}
+
+.arrow-left {
+  left: 5px;
+}
+.arrow-right {
+  right: 5px;
+}
+
+.rel {
+  position: relative;
+}
+.symbolDay {
+  position: absolute;
+  font-size: 10px;
+  right: 5px;
+  top: -7px;
+}
+.night {
+  text-decoration: underline;
+}
+.night::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #999999;
+  top: 5px;
+  left: -10px;
+}
+.e::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 3px;
+  background-color: #999999;
+  top: 5px;
+  right: 0;
+}
+.workShift {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 15px;
+  left: 0;
+}
+.workShift div {
+  padding: 15px 10px;
+  outline: 1px solid white;
+  color: #356489;
+  cursor: pointer
+}
+
+.workShift div:first-child {
+  border-top-right-radius: 20px;
+}
+.workShift div:last-child {
+  border-bottom-right-radius: 20px;
+}
+
+.workShift .active {
+  color: white;
+}
